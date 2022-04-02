@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+body{
+    --Strongcyan: hsl(172, 67%, 45%);
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    background-color: var(--Verylightgrayishcyan);
+    font-family: 'Space Mono', monospace;
+}
+.container{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 65%;
+    height: 50%;
+    border-radius: 3%;
+    padding: 1% 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.info{
+    display: block;
+    width: 48%;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+li{
+    display: block;
+    background-color: var(--Verydarkcyan);
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30%;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+li:hover{
+    background-color: var(--Lightgrayishcyan);
+    color: var(--Darkgrayishcyan);
+}
+li:focus{
+    background-color: black;
+    color: aliceblue;
+}
+input{
+    text-align: right;
+    display: block;
+    background-color: var(--Lightgrayishcyan);
+    color: var(--Grayishcyan);
+    height: 30px;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+}
+#value{
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    height: 30px;
+    width: 30%;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.info p{
+    color: var(--Grayishcyan);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#bill{
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+#people-value{
+    background-image: url("./images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+.result{
+    background-color: var(--Verydarkcyan);
+    box-sizing: border-box;
+    display: block;
+    margin: 10px 0;
+    width: 48%;
+    border-radius: 10px;
+    padding: 20px;  
+}
+.row{
+    display: flex;
+    justify-content:space-between ;
+    box-sizing: border-box;
+    margin: 20px 10px;   
+}
+.btn{
+    display: block;
+    width: 100%;
+    justify-items: center;
+    margin-top: 80px;
+}
+#reset{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 25px;
+    margin: auto;
+    background-color: var(--Lightgrayishcyan);
+    color: var(--Darkgrayishcyan);
+    padding: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+#reset:hover{
+    color: var(--Lightgrayishcyan);
+    background-color: var(--Darkgrayishcyan);
+}
+.row>p>span{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+.row>p{
+    color: var(--Darkgrayishcyan);
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+#tip-value{
+    font-size: 40px;
+    padding: 0;
+    line-height: 1;
+    font-weight: bold;
+    position: relative
+}
+#tip-values{
+    font-size: 40px;
+    padding: 0;
+    line-height: 1;
+    font-weight: bold;
+    position: relative
+}
+@media screen and (max-width: 650px) {
+    .container{
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+    .info{
+        display: block;
+        box-sizing: border-box;
+        width: 90%;
+        height: 55vh;
+        margin: auto;
+
+    }
+    .result{
+        display: block;
+        width: 90%;
+        height: 35vh;
+        margin: auto;
+    }
+    .btn{
+        margin-top: 10px;
+    }
+    ul{
+        display: flex;
+
+    }
+    .input{
+        margin-bottom: 5px;
+    }
+    li{
+        width: 45%;
+    }
+    #value{
+        width: 45%;
+    }
+}
+#comment{
+    color: red;
+    font-size: 14px;
+    text-align: right;
+    visibility: hidden;
+}
